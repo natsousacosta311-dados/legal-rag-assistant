@@ -50,8 +50,8 @@ O assistente vai além de responder perguntas estruturadas: ele classifica o ris
 
 1. Clone o Repositório
 ```bash
-git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/natsousacosta311-dados/legal-rag-assistant)
-cd SEU_REPOSITORIO
+git clone [https://github.com/natsousacosta311-dados/legal-rag-assistant]
+cd legal_rag_assistant
 ```
 
 2. Instale as Dependências necessárias
