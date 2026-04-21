@@ -64,6 +64,34 @@ pip install langchain langchain-community langchain-text-splitters sentence-tran
 
 ---
 
+## 💻 Exemplo de Execução (Filtro Antialucinação)
+
+Quando o assistente recebe uma pergunta cuja informação não existe literalmente nos documentos, a restrição sistêmica impede alucinação, retornando exatamente nosso gatilho de segurança:
+
+```text
+============================================================
+🔎 PERGUNTA: Qual é a multa por quebra de contrato?
+📂 CATEGORIA: multa
+
+📌 RESPOSTA:
+Não encontrei essa informação no contrato.
+
+⚠️ RISCO IDENTIFICADO:
+🟢 Baixo risco
+
+🔍 CONFIANÇA DA RESPOSTA:
+⚠️ Confiança moderada — 33% das palavras encontradas
+
+📊 CLÁUSULAS IDENTIFICADAS:
+  - MULTA: Não identificado
+  - PRAZO: Não identificado
+  - RESCISAO: Não identificado
+
+📄 FONTES CONSULTADAS: 2
+  1. contrato_aluguel_2.pdf | categoria: multa
+  2. contrato_aluguel_2.pdf | categoria: multa
+
+
 ## 🧠 Considerações de Engenharia e Setup 
 * **Memória vs Escalabilidade:** O framework foi moldado em `torch.float32` (visando hardwares domésticos ou instâncias standard/free CPU do Colab), todavia sua base em pipeline Transformers possibilita a transição imediata para `torch.float16` via cuda a fim de ganhar escala em aplicações enterprise.
 
